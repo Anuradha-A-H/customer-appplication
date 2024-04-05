@@ -32,8 +32,7 @@ public class AuthenticationService {
     private final JwtService jwtService;
 
 
-    public String signin(Login request)
-    {
+    public String signin(Login request) throws Exception {
         List<Login> logindtl = userRepository.findAll();
         if(logindtl.size() == 0)
         {
@@ -51,6 +50,8 @@ public class AuthenticationService {
         }
 
         var user = userRepository.findByEmail(request.getEmail()).orElseThrow(() -> new IllegalArgumentException("Invalid Email Or Password."));
+        if(user.getRole() == Role.CUSTOMER)
+              throw new Exception("Customer  is not allowed to view/ update all user");
         var jwt = jwtService.generateToken(user);
         return jwt;
 

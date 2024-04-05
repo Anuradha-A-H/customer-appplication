@@ -44,11 +44,11 @@ public class CustomerController {
        Page<Customer> page;
 
     if (key != null && value != null && !key.equals("") && !value.equals("")) {
-        System.out.println(key+" "+value);
+
         // If search parameters are provided, perform search
         page = customerService.searchCustomer(key, value, pageNumber - 1, pageSize);
     } else {
-        System.out.println(key+" "+value);
+
         // If no search parameters, just fetch paginated data
         page = customerService.getAllCustomer(pageNumber - 1, pageSize);
     }

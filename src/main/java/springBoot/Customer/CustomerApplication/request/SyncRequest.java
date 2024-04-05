@@ -22,17 +22,5 @@ public class SyncRequest {
     private String state;
     private String email;
     private String phone;
-//    // response
-//[
-//    {
-//        "uuid": "test11042c83ca754d30bdff545938bd793c",
-//            "first_name": "Chandan ",
-//            "last_name": "N P",
-//            "street": "13th main road",
-//            "address": "BTM Layout ",
-//            "city": "Bengaluru",
-//            "state": "Karnataka",
-//            "email": "Chandannp2001@gmail.com",
-//            "phone": "7353106540"
-//    }
+
 }

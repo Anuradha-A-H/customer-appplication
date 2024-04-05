@@ -22,7 +22,6 @@ import springBoot.Customer.CustomerApplication.response.LoginResponse;
 import org.springframework.data.domain.Sort;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -45,20 +44,27 @@ public class CustomerService {
 // check invalid customerId if invalid throw error if email already exists update it
     // else add  new login details and customer details to database
     public LoginResponse addCustomer(Customer signUpRequest) throws Exception {
-        if(signUpRequest.getCustomerId() != null && signUpRequest.getCustomerId()<=0)
+        if(signUpRequest.getCustomerId() != null && signUpRequest.getCustomerId()>0)
         {
-            customerRepo.save(signUpRequest);
-            throw new Exception("Somthing went wrong");
-        }else {
-
-
-            Optional<Customer> logindtl = customerRepo.findByEmail(signUpRequest.getEmail());
-            if (!logindtl.isEmpty()) {
-                Customer customer = logindtl.get();
-                signUpRequest.setCustomerId(customer.getCustomerId());
-                customerRepo.save(signUpRequest);
+            Optional<Customer> customer1 = customerRepo.findById(signUpRequest.getCustomerId());
+            if(!customer1.isEmpty())
+            {
+                Customer cust = customer1.get();
+                cust.setCity(signUpRequest.getCity());
+                cust.setState(signUpRequest.getState());
+                cust.setEmail(signUpRequest.getEmail());
+                cust.setAddress(signUpRequest.getAddress());
+                cust.setStreet(signUpRequest.getStreet());
+                cust.setFirstName(signUpRequest.getFirstName());
+                cust.setLastName(signUpRequest.getLastName());
+                cust.setPhoneNo(signUpRequest.getPhoneNo());
+                customerRepo.save(cust);
                 return null;
+            }else{
+                throw  new Exception("some thing went wrong");
             }
+
+        }else {
 
             String[] pass = signUpRequest.getEmail().split("@");
 
@@ -126,6 +132,7 @@ public class CustomerService {
         customerRepo.save(customer);
 
         // Now  safely delete the login record
+
         loginRepo.delete(login);
 
         // Finally, delete the customer record

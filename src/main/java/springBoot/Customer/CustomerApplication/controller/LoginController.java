@@ -32,6 +32,9 @@ public class LoginController {
         } catch (IllegalArgumentException e) {
             m.addAttribute("error", e.getMessage());
             return "login"; // return to login page with error message
+        } catch (Exception e) {
+            m.addAttribute("error", e.getMessage());
+            return "login";
         }
     }
 
