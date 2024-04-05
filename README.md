@@ -6,11 +6,17 @@
  ![img2 add customer](https://github.com/Anuradha-A-H/customer-appplication/assets/119663653/0068bd6e-156c-48a3-8a00-92423791310e)
 4) add customer when click of add customer button// it redirect to add customer page and add customer details with customer role by default
 5) once added successfully redirect to list customer page with customer credentials or error message(as the question specified only 3 view pages so this add customer page also act add update customer)
-![img4 search filter](https://github.com/Anuradha-A-H/customer-appplication/assets/119663653/f03d72c8-bb44-4daf-b037-f2af7bde46dc)
-6) search dropdown is made for Firstname, City, Email, Phone number with pagination
- ![img5 update customer](https://github.com/Anuradha-A-H/customer-appplication/assets/119663653/c5fd4f61-0514-4a1e-83c8-06f66585eb23)
-7) on click of edit icon it redirect to  edit customer in add customer page add edit the customer, redirects with success message to customer list page , if error error displayed in same page. Feild required validation is added in front end and also validate phone number(as the question specified only 3 view pages add customer page work as edit and also add)
 
-   2nd phase:
+      ![img3 sync upload](https://github.com/Anuradha-A-H/customer-appplication/assets/119663653/17c58550-8283-4835-a07c-c328674faaa4)
+6) on click of sync button call the remote API which return the token back using that token call list remote APT. validation are added to it - if data already present update that customer, check email format whether it ends with @gmail and check phone number is in number format and email not empty .
+
+   
+![img4 search filter](https://github.com/Anuradha-A-H/customer-appplication/assets/119663653/f03d72c8-bb44-4daf-b037-f2af7bde46dc)
+7) search dropdown is made for Firstname, City, Email, Phone number with pagination
+ ![img5 update customer](https://github.com/Anuradha-A-H/customer-appplication/assets/119663653/c5fd4f61-0514-4a1e-83c8-06f66585eb23)
+8) on click of edit icon it redirect to  edit customer in add customer page add edit the customer, redirects with success message to customer list page , if error error displayed in same page. Feild required validation is added in front end and also validate phone number(as the question specified only 3 view pages add customer page work as edit and also add)
+
+
+
    
 
