@@ -16,6 +16,8 @@
  ![img5 update customer](https://github.com/Anuradha-A-H/customer-appplication/assets/119663653/c5fd4f61-0514-4a1e-83c8-06f66585eb23)
 8) on click of edit icon it redirect to  edit customer in add customer page add edit the customer, redirects with success message to customer list page , if error error displayed in same page. Feild required validation is added in front end and also validate phone number(as the question specified only 3 view pages add customer page work as edit and also add)
 
+9) delete customer on click of delet icon
+
 
 
    
