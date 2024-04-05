@@ -5,4 +5,6 @@
  ![img2 add customer](https://github.com/Anuradha-A-H/customer-appplication/assets/119663653/0068bd6e-156c-48a3-8a00-92423791310e)
 3) add customer when click of add customer button// it redirect to add customer page and add customer details with customer role by default
 4) once added successfully redirect to list customer page with customer credentials or error message(as the question specified only 3 view pages so this add customer page also act add update customer)
+![img4 search filter](https://github.com/Anuradha-A-H/customer-appplication/assets/119663653/f03d72c8-bb44-4daf-b037-f2af7bde46dc)
+6) search dropdown is made for Firstname, City, Email, Phone number with pagination
    
